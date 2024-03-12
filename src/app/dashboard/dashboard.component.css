@@ -38,3 +38,24 @@ input-group-btn {
 .text-center {
   color: #fff;
 }
+
+.text-center {
+  text-align: center;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+
+/* Custom Button Styles */
+.custom-btn {
+  background-color: #666699; /* Custom color code */
+  color: #fff; /* Text color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-btn:hover {
+  background-color: #288abf; /* Darker shade for hover effect */
+}

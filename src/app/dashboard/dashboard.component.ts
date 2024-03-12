@@ -35,4 +35,8 @@ export class DashboardComponent {
 
     this.router.navigate(['/movie-details', { query: this.searchQuery }]);
   }
+
+  goToFeedback() {
+    this.router.navigate(['/feedbackform']); // Navigate to the feedback form component
+  }
 }
