@@ -1,4 +1,34 @@
-<div *ngIf="movieData">
-  <h2>{{ movieData.Title }}</h2>
-  <img [src]="movieData.Poster" alt="{{ movieData.Title }} Poster">
-</div>
+<div class="profile-container" *ngIf="movieData">
+	<div class="row justify-content-center align-items-center">
+		<div class="col-md-2">
+			<div class="card">
+        <div class="card-header">
+          Movie Details
+        </div>
+				<img class="card-img-top" [src]="movieData.Poster" alt="Card image cap">
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>Title:</th>
+                <td>{{ movieData.Title }}</td>
+              </tr>
+              <tr>
+                <th>Director:</th>
+                <td>{{ movieData.Director }}</td>
+              </tr>
+              <tr>
+                <th>Ratings:</th>
+                <td>{{ movieData.imdbRating }}</td>
+              </tr>
+              <tr>
+                <th>Release:</th>
+                <td>{{ movieData.Released }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+			</div>
+		</div>
+	</div>
+</div> 

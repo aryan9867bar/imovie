@@ -3,9 +3,9 @@
         <div id="content">
           <form class='form-inline'>
             <div class="input-group">
-              <input type='search' id='search' class="form-control search-form" placeholder="Search imovie or type a URL">
+              <input type='text' id='search' [(ngModel)]="searchQuery" class="form-control search-form" (input)="onSearch()" placeholder="Search imovie or type a URL" [ngModelOptions]="{standalone: true}"> 
               <span class="input-group-btn" style="width:39px">
-                <button id="search-this"type="button" class="pull-right btn btn-default search-btn">
+                <button (click)="searchMovies()" id="search-this"type="button" class="pull-right btn btn-default search-btn">
                     Search
                     <i class="fa fa-search"></i>
                 </button>

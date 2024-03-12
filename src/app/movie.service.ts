@@ -10,13 +10,14 @@ import { environment } from "../environments/environment";
 export class MovieService {
 
   apiKey = environment.API_KEY;
+  apiUrl = 'http://www.omdbapi.com/';
 
   constructor (private http:HttpClient) {
 
   }
 
-  getMovie(): Observable<any> {
-      return this.http.get(`http://www.omdbapi.com/?i=tt3896198&apikey=${this.apiKey}&language=en-US&page=1`);
+  searchMovies(query: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}?t=${query}&apikey=${this.apiKey}`);
   }
 
 }
