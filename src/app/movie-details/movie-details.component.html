@@ -1,1 +1,4 @@
-<p>movie-details works!</p>
+<div *ngIf="movieData">
+  <h2>{{ movieData.Title }}</h2>
+  <img [src]="movieData.Poster" alt="{{ movieData.Title }} Poster">
+</div>
